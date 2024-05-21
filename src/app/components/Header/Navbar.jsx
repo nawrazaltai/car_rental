@@ -1,42 +1,51 @@
 import Link from "next/link";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   const navbarItems = [
-    { label: "Cars", href: "/" },
-    { label: "About", href: "/" },
-    { label: "How it works", href: "/" },
-    { label: "Location", href: "/" },
+    { label: "Cars", href: "/cars" },
+    { label: "About", href: "/about" },
+    { label: "How it works", href: "/howitworks" },
+    { label: "Location", href: "/location" },
   ];
 
   const mappedNavbarItems = navbarItems.map((i) => {
     return (
-      <Link key={i.label} href={i.href}>
+      <NavLink key={i.label} href={i.href}>
         {i.label}
-      </Link>
+      </NavLink>
     );
   });
 
   return (
-    <div className="flex w-full bg-blue-700 justify-between p-6">
-      <div className="uppercase text-white text-lg w-1/5 flex items-center">
+    <nav className="w-full justify-between p-6 px-8 bg-black hidden lg:flex">
+      <Link
+        href="/"
+        className="uppercase text-white text-lg w-1/5 flex items-center font-bold"
+      >
         logo
-      </div>
-      <div className="text-white text-md flex justify-around w-1/3 items-center">
+      </Link>
+
+      <div className="text-white text-md flex gap-x-8 items-center">
         {mappedNavbarItems}
       </div>
 
       <div className="gap-x-2 w-1/5 flex justify-end">
         <Link
-          href="/"
-          className="text-white border border-white rounded-md p-3"
+          href="/signin"
+          className="text-white rounded-md font-bold p-3 hover:text-primary transition"
         >
-          Get started
-        </Link>
-        <Link className="text-blue-700 bg-white rounded-md p-3" href="/">
           Sign in
         </Link>
+
+        <Link
+          className="transition-colors font-bold bg-white rounded-md p-3 hover:bg-primary"
+          href="/register"
+        >
+          Sign up
+        </Link>
       </div>
-    </div>
+    </nav>
   );
 };
 

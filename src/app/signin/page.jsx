@@ -11,7 +11,7 @@ const SignIn = async () => {
   }
 
   return (
-    <div className="flex flex-col justify-center p-36">
+    <div className="flex flex-col justify-center p-36 max-w-screen-2xl">
       <h2>Signin</h2>
       <LoginForm />
     </div>

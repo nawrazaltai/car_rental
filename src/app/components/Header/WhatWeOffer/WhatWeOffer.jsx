@@ -1,5 +1,6 @@
 import React from "react";
-import OrangeCar from "public/orange.png";
+// import OrangeCar from "public/orange.png";
+import OrangeCar from "public/cars.png";
 import Image from "next/image";
 import {
   BsClipboard2Check,
@@ -36,7 +37,7 @@ const data = [
 const WhatWeOfferCard = ({ Icon, title, description }) => {
   return (
     <div className="flex w-full items-center py-2.5">
-      <div className="bg-white rounded-lg p-5 lg:p-3.5 shadow-md shadow-gray-400">
+      <div className="bg-white rounded-lg p-5 xl:p-3.5 shadow-md shadow-gray-400">
         <Icon size={30} color="#3D3B40" />
       </div>
 
@@ -52,17 +53,18 @@ const WhatWeOfferCard = ({ Icon, title, description }) => {
 
 const WhatWeOffer = () => {
   return (
-    <section className="flex flex-col items-center justify-center w-full bg-[#F0F0F2] py-10 px-5">
+    <section className="flex flex-col items-center justify-center w-full bg-[#F0F0F2] pt-10 pb-5 px-5">
       <p className="uppercase  text-gray-400 text-sm font-bold py-4 tracking-wider">
         what we offer
       </p>
-      <h2 className="text-2xl text-center font-semibold lg:text-4xl mt-2.5">
+      <h2 className="text-2xl text-center font-semibold mt-2.5 lg:text-3xl xl:text-4xl ">
         Get the best experience of rental cars
       </h2>
 
-      <div className="flex flex-col items-center mt-10 lg:mt-20 w-full lg:flex-row">
-        <div className="justify-center items-center hidden lg:flex lg:w-1/2">
-          <Image src={OrangeCar} width={800} />
+      <div className="flex flex-col-reverse items-center mt-10 xl:mt-20 w-full xl:flex-row xl:gap-x-5">
+        <div className="justify-center items-center my-5 xl:flex xl:w-1/2">
+          {/* <Image src={OrangeCar} width={800} /> */}
+          <Image src={OrangeCar} width={750} />
         </div>
 
         <div className="flex flex-col gap-y-2.5 lg:gap-y-4">

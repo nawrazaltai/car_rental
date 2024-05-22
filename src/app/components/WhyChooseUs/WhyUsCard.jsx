@@ -8,7 +8,7 @@ const WhyUsCard = ({ Icon, title, description }) => {
         <Icon size={75} color="#F1F1F1" />
       </Card>
 
-      <p className="font-semibold text-xl mt-3">{title}</p>
+      <p className="font-semibold text-xl mt-3 text-center">{title}</p>
       <p className="text-base tracking-wide text-center text-gray-500 font-medium mt-2.5">
         {description}
       </p>

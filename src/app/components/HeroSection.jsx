@@ -18,14 +18,14 @@ const HeroSection = () => {
 
         <div className="flex items-center mt-10 justify-center w-full gap-x-5">
           <Link
-            className="bg-primary py-1.5 px-5 text-base font-semibold rounded-lg hover:bg-white transition-colors md:text-lg md:py-2.5"
+            className="bg-primary rounded-full py-1.5 px-5 text-base font-semibold hover:bg-white transition-colors md:text-lg md:py-2.5"
             href={"/register"}
           >
             Sign Up
           </Link>
 
           <Link
-            className="text-white flex items-center gap-x-2 text-base md:text-lg tracking-wider font-light hover:ml-2 transition-all border-b"
+            className="text-white flex items-center gap-x-2 text-base md:text-lg tracking-wider font-light hover:ml-2 transition-all border-b hover:border-b-primary"
             href={"/cars"}
           >
             Our Car Collection

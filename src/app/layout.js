@@ -3,6 +3,7 @@ import "./globals.css";
 import { AuthProvider } from "./Providers";
 import Navbar from "./components/Header/Navbar";
 import MobileNavbar from "./components/Header/MobileNavbar";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,9 @@ export default function RootLayout({ children }) {
           <MobileNavbar />
         </header>
 
-        <main>
+        <main className="min-h-screen">
           <AuthProvider>{children}</AuthProvider>
+          <Toaster />
         </main>
       </body>
     </html>

@@ -1,6 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import WhyChooseUs from "./components/WhyChooseUs/WhyUs";
-import WhatWeOffer from "./components/Header/WhatWeOffer/WhatWeOffer";
+import WhatWeOffer from "./components/WhatWeOffer/WhatWeOffer";
 
 export default function Home() {
   return (
